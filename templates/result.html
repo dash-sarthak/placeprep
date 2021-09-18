@@ -1,0 +1,14 @@
+{% extends "layout.html" %} {% block content %}
+
+<div class="left-half pg-3">
+    <h2>Your Score</h2>
+    <h1>{{ sum }}</h1>
+    <a href="#" data-toggle="modal" data-target="#more-info">How do we calculate?</a>
+    <a href="{{ url_for('details') }}"><button class="btn-grad">Try Again</button> </a>
+</div>
+<div class="right-half">
+    <img src="{{url_for('static',filename='pg_3.png')}}" alt="">
+</div>
+
+
+{% endblock content %}

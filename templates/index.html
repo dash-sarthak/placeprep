@@ -1,0 +1,10 @@
+{% extends "layout.html" %} {% block content %}
+<div class="left-half">
+    <p>Know where you stand in the placements game!</p>
+    <h1>Use our AI to know<br> how you fair</h1>
+    <a href="{{ url_for('details') }}"><button class="btn-grad">Start now</button> </a>
+</div>
+<div class="right-half">
+    <img src="{{url_for('static',filename='pg_1.png')}}" alt="">
+</div>
+{% endblock content %}

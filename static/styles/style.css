@@ -1,0 +1,198 @@
+body {
+    background-image: url("/static/bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    padding: 1.3rem 11rem;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.nav-brand * {
+    padding: 0 1.2rem 0 0;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    background-color: rgba(17, 17, 17, 0.4);
+}
+
+a {
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.links>a:link {
+    color: white;
+}
+
+.links>a:visited {
+    color: rgb(218, 218, 218);
+}
+
+.links>a:hover {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.links>a:active {
+    color: white;
+}
+
+.btn-grad {
+    background-image: linear-gradient(to right, #887CD2 0%, #AD78A5 51%, #D67474 100%);
+    border: none;
+    margin: 10px;
+    padding: 0.7rem 1.5rem;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 0.9rem;
+    display: block;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.content {
+    margin-top: 7rem;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.left-half {
+    padding: 4rem 5rem;
+    background-color: rgba(41, 41, 41, 0.59);
+    border-radius: 1rem;
+    color: white;
+}
+
+.left-half>p {
+    font-size: 1.2rem;
+}
+
+.left-half>h1 {
+    font-size: 3.4rem;
+    font-weight: 800;
+}
+
+.left-half>a>button {
+    padding: 1.5rem 2.5rem;
+    border-radius: 1.4rem;
+    margin-top: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.details-form {
+    padding: 4rem 20rem 4rem 20rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.details-form>h2 {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    font-weight: 600;
+    background-image: linear-gradient(to right, #887CD2 0%, #AD78A5 51%, #D67474 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+form>input {
+    background-color: #1a1a1a;
+    border: none;
+    border-radius: 1rem;
+    margin: 1rem 0 1rem 0;
+    padding: 1rem 1.5rem;
+    color: white;
+    font-weight: 600;
+    width: 20rem;
+    outline: none;
+}
+
+form>select {
+    appearance: none;
+    background-color: #1a1a1a;
+    border-radius: 1rem;
+    margin: 1rem 0 1rem 0;
+    padding: 1rem 1.5rem;
+    color: white;
+    font-weight: 600;
+    width: 20rem;
+    outline: none;
+    border: 2px solid rgb(184, 140, 233);
+}
+
+form>input:focus {
+    border: 2px solid rgb(184, 140, 233);
+    border-radius: inherit;
+}
+
+form>input::placeholder {
+    color: rgb(133, 133, 133);
+}
+
+.details-form>button {
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.pg-3 {
+    display: flex;
+    margin-left: 4rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 18rem;
+    background-color: rgba(41, 41, 41, 0.59);
+    border-radius: 1rem;
+    color: white;
+}
+
+.pg-3>h2 {
+    font-weight: 700;
+}
+
+.pg-3>a {
+    color: #6A6A6A;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.pg-3>h1 {
+    margin-top: 1.4rem;
+    font-size: 4rem;
+    font-weight: 800;
+    background-image: linear-gradient(to right, #887CD2 0%, #AD78A5 51%, #D67474 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pg-3>a>button {
+    margin-top: 5rem;
+    font-size: 1.7rem;
+    padding: 1rem 2.2rem;
+    font-weight: 750;
+}

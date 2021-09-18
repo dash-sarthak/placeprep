@@ -1,0 +1,28 @@
+{% extends "layout.html" %} {% block content %}
+
+<form action="{{ url_for('result') }}" class="left-half details-form" method="POST">
+    <h2>Enter Details</h2>
+    <input type="text" placeholder="Full Name" name="full_name">
+    <input type="text" placeholder="Age" name="age">
+
+    <select id="gender" name="gender">
+        <option value="0">Female</option>
+        <option value="1">Male</option>
+    </select>
+
+    <select id="stream" name="stream">
+        <option value="0">Civil</option>
+        <option value="1">Computer Science</option>
+        <option value="2">Electrical</option>
+        <option value="3">Electronics And Communication</option>
+        <option value="4">Information Technology</option>
+        <option value="5">Mechanical</option>
+    </select>
+
+    <input type="text" placeholder="CGPA" name="cgpa">
+    <input type="text" placeholder="Backlogs (History + Active)" name="backlogs">
+    <input type="text" placeholder="Number of Internships" name="internships">
+    <button type="submit" class="btn-grad">See the results</button>
+</form>
+
+{% endblock content %}
