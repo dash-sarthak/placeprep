@@ -1,7 +1,33 @@
 from flask import Flask, render_template, request
-from calculate_score import prob_percent
+import pandas as pd
+import random
+import pickle
+
+FILE_NAME = (
+    "/home/sarthak/Desktop/Personal Projects/Placeprep/Website/finalized_model.sav"
+)
 
 app = Flask(__name__)
+
+
+def prob_percent(value_list):
+    value_dict = {
+        "Age": int(value_list[0]),
+        "Internships": int(value_list[1]),
+        "CGPA": int(float(value_list[2])),
+        "HistoryOfBacklogs": int(value_list[3]),
+        "Gender": int(value_list[4]),
+        "Stream": int(value_list[5]),
+    }
+
+    val_df = pd.DataFrame(value_dict, index=[1])
+    predictor = pickle.load(open(FILE_NAME, "rb"))
+    prob_percent = round(predictor.predict_proba(val_df)[0][1] * 100, 2)
+
+    if prob_percent == 100.0:
+        return f"{10*value_dict['CGPA'] + random.randint(10-value_dict['CGPA'], value_dict['CGPA'])} %"
+
+    return f"{prob_percent} %"
 
 
 @app.route("/")
@@ -39,11 +65,3 @@ def result():
 if __name__ == "__main__":
     app.run(debug=True)
 
-
-# <input type="text" placeholder="Full Name" name="full_name">
-#     <input type="text" placeholder="College Name" name="college">
-#     <input type="text" placeholder="Stream" name="stream">
-#     <input type="text" placeholder="CGPA" name="cgpa">
-#     <input type="text" placeholder="Backlogs (History + Active)" name="backlogs">
-#     <input type="text" placeholder="Number of Internships" name="internships">
-#     <button type="submit" class="btn-grad">See the results</button>
